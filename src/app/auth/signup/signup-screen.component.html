@@ -1,0 +1,53 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <input 
+            matInput
+            placeholder="firstName"
+            formControlName="firstName"
+            id="firstName"
+        >
+    </mat-form-field>
+    <mat-form-field>
+        <input 
+            matInput
+            placeholder="lastName"
+            formControlName="lastName"
+            id="lastName"
+        >
+    </mat-form-field>
+    <mat-form-field>
+        <input 
+            matInput
+            placeholder="Email"
+            formControlName="email"
+            id="email"
+        >
+        <p *ngIf="invalidEmail">
+            Please enter a valid email address
+        </p>
+    </mat-form-field>
+    <mat-form-field>
+        <input 
+        [type]="hide? 'password' : 'text'"
+        matInput
+        placeholder="password"
+        formControlName="password"
+        id="password"
+        >
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+    </mat-form-field>
+    <mat-form-field id="passwordConfirmation">
+        <input 
+            [type]="hide? 'password' : 'text'"
+            matInput
+            placeholder="passwordConfirmation"
+            formControlName="passwordConfirmation"
+            id="passwordConfirmation"
+            >
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        <mat-hint *ngIf="passwordNotMatch">
+            <strong>both passwords should match</strong>
+        </mat-hint>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="accent">Signup</button>
+</form>
