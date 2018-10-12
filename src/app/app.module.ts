@@ -12,9 +12,9 @@ import { QuestionDetailComponent } from './questions/question.detail.component';
 import { AnswerFormComponent } from './answer/answer-form.component';
 import { SigninScreenComponent } from './auth/singin/signin-screen.component';
 import { SignupScreenComponent } from './auth/signup/signup-screen-component';
+import { QuestionListComponent } from './questions/question-list.component'; 
 
 import { MomentModule } from'ngx-moment';
-import 'moment/locale/es';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import 'moment/locale/es';
     QuestionDetailComponent,
     AnswerFormComponent,
     SigninScreenComponent,
-    SignupScreenComponent
+    SignupScreenComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,
