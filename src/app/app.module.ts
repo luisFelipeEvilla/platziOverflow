@@ -5,16 +5,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material.module'
-import 'hammerjs'
+import { MaterialModule } from './material.module';
+import 'hammerjs';
 
 import { QuestionDetailComponent } from './questions/question.detail.component';
 import { AnswerFormComponent } from './answer/answer-form.component';
 import { SigninScreenComponent } from './auth/singin/signin-screen.component';
 import { SignupScreenComponent } from './auth/signup/signup-screen-component';
-import { QuestionListComponent } from './questions/question-list.component'; 
+import { QuestionListComponent } from './questions/question-list.component';
+import { QuestionFormComponent } from './questions/question-form.component';
 
-import { MomentModule } from'ngx-moment';
+import { MomentModule } from 'ngx-moment';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MomentModule } from'ngx-moment';
     AnswerFormComponent,
     SigninScreenComponent,
     SignupScreenComponent,
-    QuestionListComponent
+    QuestionListComponent,
+    QuestionFormComponent
   ],
   imports: [
     BrowserModule,

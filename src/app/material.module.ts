@@ -5,16 +5,20 @@ import { MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatListModule } from '@angular/material';
+    MatListModule,
+    MatGridListModule,
+    MatRadioModule } from '@angular/material';
 
-    const modules = [  
-    MatToolbarModule, 
+    const modules = [
+    MatToolbarModule,
     MatIconModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatListModule 
+    MatListModule,
+    MatGridListModule,
+    MatRadioModule
 ];
 
 @NgModule({
