@@ -7,11 +7,11 @@ import { User } from '../user.model';
     templateUrl: './signin-screen.component.html'
 })
 
-export class SigninScreenComponent implements OnInit{
+export class SigninScreenComponent implements OnInit {
 
     signinForm: FormGroup;
 
-    ngOnInit() { 
+    ngOnInit() {
         this.signinForm = new FormGroup({
             email: new FormControl(null, [
                 Validators.required,
@@ -22,11 +22,10 @@ export class SigninScreenComponent implements OnInit{
     }
 
     onSubmit() {
-        if(this.signinForm.valid) {
+        if (this.signinForm.valid) {
             const { email, password } = this.signinForm.value;
             const user = new User(email, password);
             console.log(user);
-        }   
+        }
     }
-
 }

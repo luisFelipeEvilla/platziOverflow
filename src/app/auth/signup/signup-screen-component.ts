@@ -15,10 +15,10 @@ import { User } from '../user.model';
 export class SignupScreenComponent implements OnInit{
     signupForm: FormGroup;
     hide = true;
-    passwordNotMatch = false; 
+    passwordNotMatch = false;
     $passConfirm;
-    
-    ngOnInit(){
+
+    ngOnInit() {
         this.signupForm = new FormGroup({
             firstName: new FormControl(null, Validators.required),
             lastName: new FormControl(null, Validators.required),
@@ -28,18 +28,18 @@ export class SignupScreenComponent implements OnInit{
             ]),
             password: new FormControl(null, Validators.required),
             passwordConfirmation: new FormControl(null, Validators.required)
-        })
-        this.$passConfirm = document.getElementById('passwordConfirmation')
+        });
+        this.$passConfirm = document.getElementById('passwordConfirmation');
     }
 
     onSubmit() {
-        if(this.signupForm.valid && this.signupForm.value.password === this.signupForm.value.passwordConfirmation) {
+        if (this.signupForm.valid && this.signupForm.value.password === this.signupForm.value.passwordConfirmation) {
             const { firstName, lastName, email, password } = this.signupForm.value;
             const user = new User(email, password, firstName, lastName);
             this.$passConfirm.style.marginBottom = '0';
             this.passwordNotMatch = false;
             console.log(user);
-        } else if(this.signupForm.value.password != this.signupForm.value.passwordConfirmation) {
+        } else if (this.signupForm.value.password !== this.signupForm.value.passwordConfirmation) {
             this.$passConfirm.style.marginBottom = '10px';
             this.passwordNotMatch = true;
         }

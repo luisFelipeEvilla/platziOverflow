@@ -14,8 +14,12 @@ import { SigninScreenComponent } from './auth/singin/signin-screen.component';
 import { SignupScreenComponent } from './auth/signup/signup-screen-component';
 import { QuestionListComponent } from './questions/question-list.component';
 import { QuestionFormComponent } from './questions/question-form.component';
+import { HomeScreenComponent } from './home/home-screen.component';
+import { HomeSliderComponent } from './home/home-slider.component';
 
 import { MomentModule } from 'ngx-moment';
+
+import { Routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { MomentModule } from 'ngx-moment';
     SigninScreenComponent,
     SignupScreenComponent,
     QuestionListComponent,
-    QuestionFormComponent
+    QuestionFormComponent,
+    HomeScreenComponent,
+    HomeSliderComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,8 @@ import { MomentModule } from 'ngx-moment';
     MaterialModule,
     MomentModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Routing
   ],
   providers: [],
   bootstrap: [AppComponent]
